@@ -1,6 +1,6 @@
 password: "@#FD12"
 
-groups:
+user_groups:
   - "Sales"
   - "Support"
   - "Services"

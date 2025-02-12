@@ -1,0 +1,38 @@
+password: "@#FD12"
+groups:
+  - "Sales"
+  - "Support"
+  - "Services"
+  - "IT"
+users:
+  - name: "Annabelle"
+    group: "Sales"
+
+  - name: "Bob"
+    group: "IT"
+
+  - name: "Carl"
+    group: "Support"
+    
+  - name: "Dyson"
+    group: "Support"
+
+  - name: "Evert"
+    group: "IT"
+
+  - name: "Frank"
+    group: "Sales"
+
+  - name: "Gerry"
+    group: "Support"
+
+  - name: "Harold"
+    group: "IT"
+
+  - name: "Isabella"
+    group: "Services"
+
+  - name: "Jameson"
+    group: "Services"
+
+

@@ -1,0 +1,19 @@
+---
+- name: Ansible 1
+  hosts: all
+  vars_files: 
+    - users.yaml
+
+
+  tasks:
+  - name: create groups
+    ansible.builtin.group:
+      name: "{{ item }}"
+    loop: groups
+  - name: create users
+    ansible.builtin.user:
+      name: "{{ item['name'] }}"
+      password: " {{ password }}"
+      groups: "{{ item['group'] }}"
+      ssh_key_file: ssh_key.pub
+    loop: "{{ users }}"

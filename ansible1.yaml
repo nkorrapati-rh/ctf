@@ -1,6 +1,6 @@
 ---
 - name: Ansible 1
-  hosts: all
+  hosts: server2
   vars_files: 
     - users.yaml
 

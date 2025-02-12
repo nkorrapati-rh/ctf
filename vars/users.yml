@@ -1,9 +1,11 @@
 password: "@#FD12"
+
 groups:
   - "Sales"
   - "Support"
   - "Services"
   - "IT"
+
 users:
   - name: "Annabelle"
     group: "Sales"

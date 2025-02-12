@@ -9,7 +9,7 @@
   - name: create groups
     ansible.builtin.group:
       name: "{{ item }}"
-    loop: groups
+    loop: "{{ groups }}"
   - name: create users
     ansible.builtin.user:
       name: "{{ item['name'] }}"

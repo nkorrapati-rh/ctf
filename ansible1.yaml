@@ -1,19 +1,51 @@
 ---
 - name: Ansible 1
   hosts: all
-  vars_files: 
-    - users.yaml
 
 
   tasks:
   - name: create groups
     ansible.builtin.group:
       name: "{{ item }}"
-    loop: "{{ user_groups }}"
+    loop: 
+      - "Sales"
+      - "Support"
+      - "Services"
+      - "IT"
+
   - name: create users
     ansible.builtin.user:
       name: "{{ item['name'] }}"
-      password: " {{ password }}"
+      password: "@#FD12"
       groups: "{{ item['group'] }}"
       ssh_key_file: ssh_key.pub
-    loop: "{{ users }}"
+    loop:
+      - name: "Annabelle"
+        group: "Sales"
+
+      - name: "Bob"
+        group: "IT"
+
+      - name: "Carl"
+        group: "Support"
+    
+      - name: "Dyson"
+        group: "Support"
+
+      - name: "Evert"
+        group: "IT"
+
+      - name: "Frank"
+        group: "Sales"
+
+      - name: "Gerry"
+        group: "Support"
+
+      - name: "Harold"
+        group: "IT"
+
+      - name: "Isabella"
+        group: "Services"
+
+      - name: "Jameson"
+        group: "Services"
